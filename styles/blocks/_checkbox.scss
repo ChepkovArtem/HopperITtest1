@@ -1,0 +1,82 @@
+.checkbox{
+    border-radius: 2px;
+    margin: 0 auto 0 0;
+    :hover{
+        background-color:$blueCheckboxHover;
+    }
+    .checkbox__label{
+        cursor: pointer;
+        margin-bottom: 0;
+        display: flex;
+        border-radius: 2px;
+        input:checked{
+            & + .checkbox__box{
+                border-color: $blueCheckboxBG;
+                svg{
+                    path{
+                        fill: $blueCheckboxBG;
+                    }
+                    polyline{
+                        stroke-dashoffset: 0;
+                    }
+                }
+            }
+        }
+        &:hover{
+            .checkbox__box{
+                svg{
+                    path{
+                        stroke-dashoffset: 0;
+                    }
+                }
+            }
+        }
+        .checkbox__box{
+            position: relative;
+            float: left;
+            width: 18px;
+            height: 18px;
+            border: 2px solid $lightblack;
+            border-radius: 2px;
+            svg{
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                top: -2px;
+                left: -2px;
+                path, polyline{
+                    fill: none;
+                    stroke-width: 2;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+                path{
+                    stroke: $blueCheckboxBG;
+                    stroke-dasharray: 71px;
+                    stroke-dashoffset: 71px;
+                    transition: all .6s ease;
+                }
+                polyline{
+                    stroke: #FFF;
+                    stroke-dasharray: 20px;
+                    stroke-dashoffset: 20px;
+                    transition: all .3s ease;
+                }
+            }
+        }
+        .checkbox__title{
+            margin: 1px 8px 0;
+            font-size: 14px;
+            line-height: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: $checkBoxText;
+        }
+    }
+    .checkbox__invisible{
+        position: absolute;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}

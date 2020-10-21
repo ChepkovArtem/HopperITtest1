@@ -1,0 +1,63 @@
+.buttons{
+    width: 100%;
+    display: flex;
+    button{
+        padding: 15px 20px 13px;
+        border: none;
+        border-radius: 2px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        font-family: 'Ubuntu', sans-serif;
+        cursor: pointer;
+        transition: 0.5s;
+        outline: none;
+    }
+    &__send{
+        margin: 0 auto 0 0;
+        .send__cancel{
+            margin-left: 20px;
+        }
+    }
+    &__save{
+        margin: 0 0 0 auto;
+    }
+    .send__confirmation{
+        background-color: $blueButton;
+        color: white;
+        &:hover{
+            background-color: $blueButtonHover; 
+        }
+        &:focus{
+            background-color: $blueButton;
+            box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.5);
+        }
+        &:active{
+            background-color: $blueButtonActive;
+            box-shadow: none;
+        }
+        &:disabled{
+            background-color: $blueButtonActive;
+            opacity: 0.5;
+        }
+    }
+    .send__cancel, .save__confirmation{
+        background-color: $gray;
+        color: $lightblack;
+        &:hover{
+            background-color: $grayHover; 
+        }
+        &:focus{
+            background-color: $gray;
+            box-shadow: 0 0 0 2px $grayHover;
+        }
+        &:active{
+            background-color: $grayActive;
+            box-shadow: none;
+        }
+        &:disabled{
+            background-color: $grayActive;
+            opacity: 0.5;
+        }
+    }
+}

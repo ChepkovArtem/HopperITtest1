@@ -1,0 +1,68 @@
+.form{
+    margin-top: 20px;
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        &:not(:first-child){
+            margin-top: 20px;
+        }
+        .form__block{
+            width: 100%;
+            position: relative;
+            border: none;
+            .form__block-title{
+                font-size: 11px;
+                line-height: 13px;
+                font-weight: 400;
+                position: absolute;
+                top: 8px;
+                left: 12px;
+                transition: 0.5s;
+            }
+            input:focus ~ .form__block-title, textarea:focus ~ .form__block-title{
+                color: $blueButton;
+            }
+        }
+        .form__block:not(:first-child){
+            margin-left: 20px;
+        }
+    }
+    input, textarea{
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        background-color: $grayBG;
+        width: 100%;
+        padding: 25px 12px 8px;
+        cursor: pointer;
+        border-radius: 2px;
+        border: 1px solid $grayBG;
+        outline: none;
+        transition: 0.5s;
+        &:hover{
+            background-color: $grayBGHover; 
+        }
+        &:focus{
+            box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.75);
+        }
+        &.error{
+            box-shadow: 0 0 0 2px $redWarningBorder;
+        }
+    }
+    textarea{
+        line-height: 18px;
+        height: 122px;
+        overflow: hidden;
+        resize: none;
+    }
+    input::placeholder, textarea::placeholder{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    input::placeholder{
+        line-height: 16px;
+    }
+}

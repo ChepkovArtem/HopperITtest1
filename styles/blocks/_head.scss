@@ -1,0 +1,35 @@
+/* стили до алерта*/
+
+.title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 80px;
+}
+
+.legend{
+    position: relative;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #333333;
+    margin-top: 20px;
+    &:before{
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        left: -20px;
+        top: 6px;
+        background: #F19932;
+        border-radius: 2px;
+        }
+    }
+
+    .subtitle{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        margin-top: 32px;
+    }

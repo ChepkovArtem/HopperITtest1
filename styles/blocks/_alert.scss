@@ -1,0 +1,46 @@
+.alert{
+    margin-top: 20px;
+    position: relative;
+    background-color: $yellowAlert;
+    padding: 20px 20px 20px 1000px;
+    width: fit-content;
+    border-radius: 0px 4px 4px 0px;
+    left: -1000px;
+    display: none;
+    &.alert--show{
+        display: block;
+        animation: appear 2s ease-in-out;
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+        width: 353px;
+        margin: 0 auto 0 0;
+    }
+    &__title{
+        font-size: 13px;
+        line-height: 15px;
+        font-weight: 700;
+    }
+    &__message{
+        font-size: 10px;
+        line-height: 11px;
+        font-weight: 400;
+        margin-top: 12px;
+        width: 314px;
+    }
+    &__icon{
+        width: 19.06px;
+        height: 17.01px;
+        margin-left: 20px;
+    }
+}
+
+@keyframes appear{
+    0% {
+        left: -2500px;
+    }
+    100% {
+        left: -1000px;
+    }
+}

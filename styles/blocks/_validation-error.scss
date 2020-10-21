@@ -1,0 +1,20 @@
+.form__error{
+    display: none;
+    width: calc(100% + 4px);
+    transform: translate3d(-2px,-4px,0);
+    background-color: $redWarningBorder;
+    border-radius: 0 0 2px 2px;
+    position: relative;
+    z-index: -1;
+    transition: 1s;
+    &.show{
+        display: block; 
+    }
+    &--text{
+        color: $redWarningTextIn;
+        padding: 6px 14px 2px;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 13px;
+    }
+}
